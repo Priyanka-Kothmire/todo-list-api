@@ -9,7 +9,20 @@
 3. **Install dependencies**:
     npm install
 
-4. **Start the server**:
+   This command will install all necessary packages, including:
+   1.express: Web framework for Node.js
+   2.mongoose: ODM (Object Data Modeling) library for MongoDB
+   3.body-parser: Middleware to parse incoming request bodies
+   4.nodemon (dev dependency): Automatically restarts the server on file changes
+
+  ### Database ###
+   Database : test, 
+   collection :task. 
+   check the database and collection MongoDB Compass or terminal.
+
+
+
+5. **Start the server**:
      nodemon server.js
      The server will start on `http://localhost:3000`.
 
@@ -91,5 +104,57 @@
         "updated_at": "2024-08-24T10:09:50.445Z",
         "__v": 0
     }
+
 ]
+
+### 3. **Retrieve a single task by ID**
+
+- **Endpoint**: `GET /tasks/:id`
+- **Description**: Retrieve a specific task by its ID.
+- **Response**:
+    - **200 OK**:
+      {
+        "_id": "66c9b16e6758123bddaa29e5",
+        "title": "Buy groceries",
+        "description": "Milk, Bread, Eggs",
+        "status": "completed",
+        "created_at": "2024-08-24T10:09:50.427Z",
+        "updated_at": "2024-08-24T10:09:50.445Z",
+        "__v": 0
+      }
+
+  **404 Not Found**: Task not found.
+
+  ### 4. **Update a task by ID**
+
+- **Endpoint**: `PUT /tasks/:id`
+- **Description**: Update a specific task by its ID.
+- **Request Body**: (Partial or full update)
+    {
+        "status": "completed"
+    }
+  
+- **Response**:
+    - **200 OK**: Task successfully updated.
+      
+    - **404 Not Found**:
+    -  { "message": "Task not found" }
+
+    - **400 Bad Request**: Invalid input data.
+
+ ### 5. **Delete a task by ID**
+
+- **Endpoint**: `DELETE /tasks/:id`
+- **Description**: Delete a specific task by its ID.
+- **Response**:
+    - **200 OK**:
+    - { "message": "Task deleted successfully" }
+    - 
+    - **404 Not Found**: Task not found.
+    - { "message": "Task not found" }
+
+ 
+## License
+
+This project is licensed under the MIT License.
 
