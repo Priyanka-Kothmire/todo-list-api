@@ -25,8 +25,71 @@
         "description": "Milk, Bread, Eggs",
         "status": "pending"
     }
-    ```
+  
 - **Response**:
     - **201 Created**: Task successfully created.
     - **400 Bad Request**: Invalid input data.
+ 
+  ### 2. **Retrieve all tasks**
+
+- **Endpoint**: `GET /tasks`
+- **Description**: Retrieve a list of all tasks.
+- **Response**:
+    - **200 OK**:
+ 
+    - [
+    {
+        "_id": "66c63b756e662db802f7bff1",
+        "title": "finish the project",
+        "status": "in-progress",
+        "created_at": "2024-08-21T19:09:41.486Z",
+        "updated_at": "2024-08-21T19:09:41.493Z",
+        "__v": 0
+    },
+    {
+        "_id": "66c7063c808028203fe11cf0",
+        "title": "upload the document",
+        "description": "complete documentation by friday",
+        "status": "pending",
+        "created_at": "2024-08-22T09:34:52.307Z",
+        "updated_at": "2024-08-22T09:34:52.314Z",
+        "__v": 0
+    },
+    {
+        "_id": "66c85b457cac7b835d71fff3",
+        "title": "complete the exam",
+        "description": "complete test by friday",
+        "status": "pending",
+        "created_at": "2024-08-23T09:49:57.343Z",
+        "updated_at": "2024-08-23T09:49:57.349Z",
+        "__v": 0
+    },
+    {
+        "_id": "66c85c51b0e13f9e5c591e31",
+        "title": "Test Completed",
+        "description": "complete exam by today ",
+        "status": "in-progress",
+        "created_at": "2024-08-23T09:54:25.190Z",
+        "updated_at": "2024-08-23T09:54:25.195Z",
+        "__v": 0
+    },
+    {
+        "_id": "66c986c2832bb58bcf99d8b7",
+        "title": "project incomplete",
+        "description": "complete the project by monday ",
+        "status": "in-progress",
+        "created_at": "2024-08-24T07:07:46.260Z",
+        "updated_at": "2024-08-24T07:07:46.268Z",
+        "__v": 0
+    },
+    {
+        "_id": "66c9b16e6758123bddaa29e5",
+        "title": "Buy groceries",
+        "description": "Milk, Bread, Eggs",
+        "status": "completed",
+        "created_at": "2024-08-24T10:09:50.427Z",
+        "updated_at": "2024-08-24T10:09:50.445Z",
+        "__v": 0
+    }
+]
 
