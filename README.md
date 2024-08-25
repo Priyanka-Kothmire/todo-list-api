@@ -8,8 +8,7 @@
 
 3. **Install dependencies**:
     npm install
-
-   This command will install all necessary packages, including:
+  ### This command will install all necessary packages, including:
    1.express: Web framework for Node.js
    2.mongoose: ODM (Object Data Modeling) library for MongoDB
    3.body-parser: Middleware to parse incoming request bodies
