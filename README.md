@@ -12,3 +12,21 @@
 4. **Start the server**:
      nodemon server.js
      The server will start on `http://localhost:3000`.
+
+   ## API Endpoints
+
+### 1. **Create a new task**
+
+- **Endpoint**: `POST /tasks`
+- **Description**: Create a new task.
+- **Request Body**:
+    {
+        "title": "Buy groceries",
+        "description": "Milk, Bread, Eggs",
+        "status": "pending"
+    }
+    ```
+- **Response**:
+    - **201 Created**: Task successfully created.
+    - **400 Bad Request**: Invalid input data.
+
